@@ -279,7 +279,6 @@
                     }
                     console.log(sp+star); // no ',' >> use '+' 
                     star+="**";
-                    sp-=" ";
                     if(sp == 0){
                         sp="";
                     }
