@@ -247,7 +247,11 @@
 
                 //EXERCICE_10
 
-         
+
+                // ==== >>>> Result In Console Form
+
+
+                //PLEASE ENTER NUMBER OF LINE YOU WANT !! 'n_line' == Number line
                 var n_line = 5;
                 var star="*";var sp =" ";
                 for(var i = n_line;i > 0;i--){
@@ -262,5 +266,23 @@
                     }
                     n_line--;
                     
+                }
+                
+                //or methode _ 2
+
+                var star ="*",sp ="";
+                //PLEASE ENTER NUMBER OF LINE YOU WANT !! 'n_line' == Number line
+                var n_line = 5,num = 1;
+                for(var j = 0;j < n_line;j++){
+                    for(var i = 0;i < n_line-num;i++){
+                        sp+=" ";
+                    }
+                    console.log(sp+star); // no ',' >> use '+' 
+                    star+="**";
+                    sp-=" ";
+                    if(sp == 0){
+                        sp="";
+                    }
+                    num++;
                 }
                   
