@@ -259,7 +259,6 @@
                         sp+=" ";
                     }
                     console.log(sp,star);  
-                    sp-=" ";
                     star+="**";
                     if(sp == 0){
                         sp=" ";
