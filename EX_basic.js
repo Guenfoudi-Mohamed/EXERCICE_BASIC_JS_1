@@ -58,38 +58,35 @@
                 //EXERCICE_3
 
      
-                var t1 = [27,66666.6,28,-5,155,66666.5,-5526,-5555,115,25,-556455154,-65552447581,-65552447580,-10];
-                var large_number,small_number,stock;
-                document.write("Table of numbers : >> ",t1,"<br>");
-                for(var i = 0; i < t1.length ; i++){
-                    if(t1[i] > t1[i+1]){
-                        stock = t1[i+1];
-                        t1[i+1] = t1[i];
-                        t1[i] = stock;
-                    }
-                    else if(t1[i+1] > t1[i+2]){
-                        stock = t1[i+1];
-                        t1[i+1] = t1[i+2];
-                        t1[i+2] = stock;
-                    }
-                }
-                for(var i = t1.length-1 ; i >= 0 ; i--){
-                    if(t1[i] < t1[i-1]){
-                        stock = t1[i-1];
-                        t1[i-1] = t1[i];
-                        t1[i] = stock;
-                    }
-                    else if(t1[i-1] < t1[i-2]){
-                        stock = t1[i-2];
-                        t1[i-2] = t1[i-1];
-                        t1[i-1] = stock;
-                    }
-                }
+                //EXERCICE_3
+
                 
-                large_number = t1[t1.length-1];
-                small_number = t1[0];
+                var arr = [31,162,0.11,587.01,0,585,586,-587,5,0.115,0.3,-62,420,48,0.5];
+                var large_number,small_number,stock;
+                
+                document.write("Before : Table of numbers : >> ",arr,"<br>");
+                for(var x = 0;x <= arr.length-1;x++){
+                    for(var i = 0;i < arr.length;i++){
+                        if(arr[i] > arr[i+1]){
+                            stock = arr[i];
+                            arr[i] = arr[i+1];
+                            arr[i+1] = stock;
+                        }
+                    }
+                    for(var j = arr.length-1;j > 0;j--){
+                        if(arr[j] < arr[j-1]){
+                            stock = arr[j];
+                            arr[j] = arr[j-1];
+                            arr[j-1] = stock;
+                        }
+                    }
+                }   
+                document.write("After : Table of numbers : >> ",arr,"<br>");
+                large_number = arr[arr.length-1];
+                small_number = arr[0];
                 document.write("<br>The large number is : ",large_number);
                 document.write("<br>The small number is : ",small_number);
+
             
 
 
