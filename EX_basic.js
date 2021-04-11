@@ -281,3 +281,42 @@
                     num++;
                 }
                   
+                
+
+
+
+                                                      //different between null and undefined
+
+
+                // console.log(null == undefined);      //true
+                // console.log(null === undefined);     //false
+
+                // console.log(typeof(null));          //object
+                // console.log(typeof(undefined));      //undefined
+
+                let fruits = prompt("what is your favourite of fruits ??");
+                let lc = fruits.toLowerCase();
+                function t1(propriet){
+                    switch(propriet){
+                        case "kiwi":
+                            alert("it's delicous !");
+                            break;
+                        case "banana":
+                            alert("wow");
+                            break;
+                        case "":
+                        case "\"\"":    
+                            lc = t1(prompt("what is your favourite of fruits ??").toLowerCase());
+                            break;
+                        default:
+                            for(var i = 0;i < 2;i++){        // yes we can use for or function inside switch
+                                alert("nice !");
+                                alert("nice !");
+                                alert("nice !");
+                                break;
+                            }
+                            lc = t1(prompt("what is your favourite of fruits ???").toLowerCase());
+                            break;
+                    }
+                }
+                t1(lc);
