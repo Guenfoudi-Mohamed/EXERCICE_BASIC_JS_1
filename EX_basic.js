@@ -320,3 +320,24 @@
                     }
                 }
                 t1(lc);
+
+
+//=== exercice guess an random 
+
+                function guess(){
+                    let guess = prompt("Please enter a number between 0 ~ 10");
+                    let numberR = Math.floor(Math.random() * 11);
+                    while(guess != numberR){
+                        guess = prompt("Please enter a number AGAIN , random number = "+numberR);
+                        if(guess > numberR){
+                            console.log("Your guess is very low");
+                        }
+                        else if(guess < numberR){
+                            console.log("Your guess is very high");
+                        }
+                    }
+                    if(guess == numberR){
+                        console.log("you are win !! your guess is : "+guess+", and number random is : "+numberR);
+                    }
+                }
+                guess();
