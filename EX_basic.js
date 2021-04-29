@@ -322,7 +322,7 @@
                 t1(lc);
 
 
-//=== exercice guess an random 
+                //=== exercice guess an random 
 
                 function guess(){
                     let guess = prompt("Please enter a number between 0 ~ 10");
@@ -341,3 +341,22 @@
                     }
                 }
                 guess();
+
+
+                //exercice triangle
+
+                let n_line = 10;
+                let star = "*",sp = ""; 
+                for(let i = 0;i < n_line;i++){
+                    for(let j = n_line-1;j > i;j--){
+                        sp+=" ";
+                    }
+                    if(i == 0){
+                        console.log(sp+star);
+                    }
+                    else{
+                        star+=" *"
+                        console.log(sp+star);
+                    }
+                    sp="";
+                }
