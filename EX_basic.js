@@ -383,3 +383,30 @@
                     cont_1 = 0;
                 }
                 console.log(`the big number is repeater =>=> ${result} number of repeat is =>=> ${cont_2}`);
+
+
+
+
+                EXERCICE DRIVING LICENSE
+
+                let age = prompt(`Please give me your old`);
+                if(age >= 18){
+                    console.log(`you can star driving license`);
+                }    
+                else if(age < 18){
+                    let years_left = 18 - age;
+                    console.log(`Is too young wait another ${years_left}`);
+                }
+
+
+
+                const age = prompt(`Please give me your BIRTHDAY`);
+                let century;
+                if(age >= 2000){
+                    century = 21;
+                    console.log(`century is >> ${century} .`);
+                }    
+                else if(age < 2000){
+                    century = 20;
+                    console.log(`century is >> ${century} .`);
+                }
