@@ -360,3 +360,26 @@
                     }
                     sp="";
                 }
+
+                // exercice of number is must repeat in array
+                
+                let arr = [5,2,5,6,6,6,6,6,6,6,6];
+                let result = "";
+                let cont_1 = 0,cont_2 = 0;
+
+                for(let i = 0;i < arr.length;i++){
+                    for(let j = 0;j<arr.length;j++){
+                        if(result == arr[i]){
+                            break;
+                        }
+                        if(arr[i] == arr[j]){
+                            cont_1++;                         
+                        }
+                    }
+                    if(cont_1 > cont_2){
+                        result = arr[i];    // 5,
+                        cont_2 = cont_1;    // 2,
+                    }
+                    cont_1 = 0;
+                }
+                console.log(`the big number is repeater =>=> ${result} number of repeat is =>=> ${cont_2}`);
