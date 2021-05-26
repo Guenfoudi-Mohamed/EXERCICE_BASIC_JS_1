@@ -410,3 +410,24 @@
                     century = 20;
                     console.log(`century is >> ${century} .`);
                 }
+
+
+                //Exercice 'aBc' >> 'aBcDe';
+
+                let noun = String(prompt("Give me a noun without espace !")); 
+                let result="";
+                // let length_noun = noun.length;
+                // if((length_noun % 2) == 0){              //mohamed =>=> mOhMeD
+                    for(let i = 0;i<noun.length;i++){
+                        if((i % 2) == 0){result+=noun[i].toLowerCase();}
+                        else{result+=noun[i].toLocaleUpperCase();}
+                    }
+                    console.log(result);
+                // }
+                // else if((length_noun % 2) == 1){          //med =>=> mEd
+                //     for(let i = 0;i<noun.length;i++){
+                //         if((i % 2) == 1){result+=noun[i].toUpperCase();}
+                //         else{result+=noun[i].toLowerCase();}
+                //     }
+                //     console.log(result);
+                // }
