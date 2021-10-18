@@ -431,3 +431,39 @@
                 //     }
                 //     console.log(result);
                 // }
+
+
+
+ //                                                                      === Exercice "Triangle pascal" ===
+
+                var arr_1 = [],arr_2 = [];
+                var conteur = 0,result = 0;
+                function tp(num_line){
+                    document.write("list : "+arr_2+"<br>");
+                    for(var i = 1;i <= num_line;i++){                      //i = 3
+                        for(var j = 0;j < i;j++){                                   
+                            if(j == 0 || j == (i-1)){          
+                                arr_2.push(1);                          //arr_2 = [1] , arr_2 = [1,1], arr_2 = [1,2,1]
+                                continue;
+                            }
+                            result = arr_1[j]+arr_1[j-1];
+                            arr_2.push(result);
+                        }
+                        if(i >= 2){
+                            conteur++;
+                            for(var y = 0;y<arr_2.length;y++){
+                                arr_1.push(arr_2[y]);
+                            }
+                        }
+                        document.write(arr_2+"<br>");                    //1 ,11
+                        for(var x = 0;x < i;x++){              
+                            arr_2.pop();                                //arr_2 = [],
+                        }
+                        // if(conteur > 0){
+                        //     arr_1.splice(0,arr_1.length);            //arr_1 = []
+                        // }
+                        
+                        conteur = 0;
+                    }
+                }
+                tp(7);
